@@ -51,6 +51,7 @@ class ProduitControlller extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
+            'id_user' => 'integer',
             'nom' => 'required|string|max:70',
             'quantitee' => 'integer',
             'prix_unitaire' => 'integer',
